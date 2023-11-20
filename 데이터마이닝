@@ -1,0 +1,10 @@
+import pandas as pd
+df=pd.read_excel('pivot.xlsx')
+df
+
+columns=['id_num','subject','score']
+print(df,'\n)
+
+df_pivot=df.pivot(index='id_num',
+        columns='subject'.values='score')
+print(df_pivot,'\n')
